@@ -19,13 +19,14 @@ export default function DotsMobileStepper() {
 
   return (
     <MobileStepper
+      id='carousel'
       variant="dots"
       steps={6}
       position="static"
       activeStep={activeStep}
       sx={{ maxWidth: 400, flexGrow: 1 }}
       nextButton={
-        <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+        <Button id='carousel_btn' size="small" onClick={handleNext} disabled={activeStep === 5}>
           Next
           {theme.direction === 'rtl' ? (
             <KeyboardArrowLeft />
@@ -35,7 +36,7 @@ export default function DotsMobileStepper() {
         </Button>
       }
       backButton={
-        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+        <Button id='carousel_btn' size="small" onClick={handleBack} disabled={activeStep === 0}>
           {theme.direction === 'rtl' ? (
             <KeyboardArrowRight />
           ) : (
